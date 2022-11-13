@@ -51,10 +51,10 @@ export default function TextForm(props) {
         <div className="mb-3">
         <textarea className={`form-control bg-${props.mode.bg} text-${props.mode.text} border-${props.mode.bg}`} value={text} onChange={handleOnChange} placeholder="Enter Text Here" id="myBox" rows="20"></textarea>
         </div>
-        <button className="btn btn-primary" onClick={handleUpClick}>Convert To UpperCase</button>
-        <button className="btn btn-primary mx-3" onClick={handleLowClick}>Convert To LowerCase</button>
-        <button className="btn btn-primary" onClick={handleReverse}>Reverse Text</button>
-        <button className="btn btn-danger mx-3" onClick={handleClear}>Clear Text</button>
+        <button className="btn btn-primary my-2" onClick={handleUpClick}>Convert To UpperCase</button>
+        <button className="btn btn-primary mx-3 my-2" onClick={handleLowClick}>Convert To LowerCase</button>
+        <button className="btn btn-primary my-2" onClick={handleReverse}>Reverse Text</button>
+        <button className="btn btn-danger mx-3 my-2" onClick={handleClear}>Clear Text</button>
     </div>
     <div className={`conatiner text-${props.mode.text} my-4`}>
         <p>{WordCount} Words and {text.length} Characters</p>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Navbar from './components/Navbar';
 import Alert from './components/Alert';
-import About from './components/About';
+//import About from './components/About';
 import TextForm from './components/TextForm';
-import{ BrowserRouter, Route, Routes }from "react-router-dom";
+//import{ BrowserRouter, Route, Routes }from "react-router-dom";
 
 
 
@@ -42,17 +42,11 @@ export default function App() {
   }
   return (
     <React.Fragment>
-    <BrowserRouter>
     <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
     <Alert alert={alert} />
     <div className="container my-3">
-    <Routes>
-      <Route exact path="/" element={<TextForm heading="Enter Text To Modify" mode={mode} sendMessage={showAlert} />} />
-      <Route exact path="/About" element={<About mode={mode} aboutText="About" />} />
-    </Routes>
+    <TextForm heading="Enter Text To Modify" mode={mode} sendMessage={showAlert} />
     </div>
-
-    </BrowserRouter>
     </React.Fragment>
   )
 }
