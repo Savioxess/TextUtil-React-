@@ -50,8 +50,8 @@ export default function TextForm(props) {
         <button className="btn btn-danger mx-1 my-2" onClick={handleClear}>Clear Text</button>
     </div>
     <div className={`conatiner text-${props.mode.text} my-4`}>
-        <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} Words and {text.length} Characters</p>
-        <p>Minutes to read the paragraph: {0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length}</p>
+        <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} Words and {text.length} Characters</p>
+        <p>Minutes to read the paragraph: {0.008 * text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</p>
         <h1 className='my-4'>Preview</h1>
         <p>{text}</p>
     </div>
