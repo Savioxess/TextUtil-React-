@@ -5,7 +5,7 @@ export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode.bg} bg-${props.mode.bg}`}>
     <div className={`container-fluid`}>
-      < a className="navbar-brand"  href="/TextUtil-React-">{props.title}</ a>
+      < Link className="navbar-brand"  to="/TextUtil-React-">{props.title}</Link>
       
       
       <div class="form-check form-switch">
